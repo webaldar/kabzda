@@ -8,9 +8,9 @@ import {UncontrolledRating} from "./component/UncontrolledRating";
 function App() {
   return (
     <div className="App">
-      {/*<Switcher/>*/}
-      <Rating value={5}/>
-      <UncontrolledRating/>
+      <Switcher/>
+      {/*<Rating value={5}/>*/}
+      {/*<UncontrolledRating/>*/}
     </div>
   );
 }

@@ -29,10 +29,20 @@ export const Switcher = (props: SwitcherPropsType) => {
         border: '1px solid black',
         backgroundColor: on ? 'green' : 'red',
     }
+    const switchOn = () => {
+        setOn(true)
+    }
+    const switchOff = () => {
+        setOn(false)
+    }
     return (
         <div>
-            <div style={onStyle} onClick={() => {setOn(true)}}>On</div>
-            <div style={offStyle} onClick={() => {setOn(false)}}>Off</div>
+            <div style={onStyle} onClick={switchOn}>On
+            </div>
+            <div style={offStyle} onClick={switchOff}>Off
+            </div>
+            {/*<div style={onStyle} onClick={() => {setOn(true)}}>On</div>*/}
+            {/*<div style={offStyle} onClick={() => {setOn(false)}}>Off</div>*/}
             <div style={indicatorStyle}></div>
         </div>
     );
