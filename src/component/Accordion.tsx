@@ -8,12 +8,18 @@ type AccordionProps = {
 export const Accordion = (props: AccordionProps) => {
     return (
         <div>
-            <h3>{props.title}</h3>
+            <AccordionTitle title={props.title}/>
             {!props.collapsed && <AccordionBody/>}
         </div>
     );
 };
 
+type AccordionTitleProrpsType = {
+    title: string
+}
+const AccordionTitle = (props: AccordionTitleProrpsType) => {
+    return <h3>{props.title}</h3>
+}
 const AccordionBody = () => {
     return (
         <ul>

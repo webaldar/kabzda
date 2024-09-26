@@ -13,7 +13,7 @@ function App() {
             <Rating value={4}/>
             <UncontrolledRating/>
             <Switcher/>
-            <Accordion title={'Menu'} collapsed={true}/>
+            <Accordion title={'Menu'} collapsed={false}/>
             <UncontrolledAccordion title={'Menu uncontrolled'} />
 
         </div>
