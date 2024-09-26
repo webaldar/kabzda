@@ -1,25 +1,24 @@
 // @flow
 import * as React from 'react';
+import {useState} from "react";
 
-type SwitcherPropsType = {
-    status: boolean
-    changeStatus: (value: boolean) => void
-};
-export const Switcher = (props: SwitcherPropsType) => {
-
+type SwitcherPropsType = {};
+export const UncontrolledSwitcher = () => {
+    let [on, setOn] = useState(true)
+    // let on = true
     const onStyle = {
         display: 'inline-block',
         width: '50px',
         height: '50px',
         border: '1px solid black',
-        backgroundColor: props.status ? 'green' : 'white',
+        backgroundColor: on ? 'green' : 'white',
     }
     const offStyle = {
         display: 'inline-block',
         width: '50px',
         height: '50px',
         border: '1px solid black',
-        backgroundColor: props.status ? 'white' : 'red',
+        backgroundColor: on ? 'white' : 'red',
     }
     const indicatorStyle = {
         display: 'inline-block',
@@ -28,13 +27,13 @@ export const Switcher = (props: SwitcherPropsType) => {
         marginLeft: '10px',
         borderRadius: '50%',
         border: '1px solid black',
-        backgroundColor: props.status ? 'green' : 'red',
+        backgroundColor: on ? 'green' : 'red',
     }
     const switchOn = () => {
-        props.changeStatus(true)
+        setOn(true)
     }
     const switchOff = () => {
-        props.changeStatus(false)
+        setOn(false)
     }
     return (
         <div>
@@ -42,6 +41,8 @@ export const Switcher = (props: SwitcherPropsType) => {
             </div>
             <div style={offStyle} onClick={switchOff}>Off
             </div>
+            {/*<div style={onStyle} onClick={() => {setOn(true)}}>On</div>*/}
+            {/*<div style={offStyle} onClick={() => {setOn(false)}}>Off</div>*/}
             <div style={indicatorStyle}></div>
         </div>
     );
