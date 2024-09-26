@@ -9,14 +9,14 @@ import {UncontrolledAccordion} from "./component/UncontrolledAccordion";
 
 export type ratingValueType = 0 | 1 | 2 | 3 | 4 | 5
 function App() {
-
-
     const [rating, setRating] = useState<ratingValueType>(0)
+    const [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
+
     return (
         <div className="App">
             <UncontrolledRating/>
             <Switcher/>
-            <Accordion title={'Menu'} collapsed={false}/>
+            <Accordion title={'Menu'} collapsed={accordionCollapsed} changeCollapsed={setAccordionCollapsed}/>
             <Rating value={rating} ratingChange={setRating}/>
             <UncontrolledAccordion title={'Menu uncontrolled'} />
         </div>
