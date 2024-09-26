@@ -16,12 +16,19 @@ export const UncontrolledAccordion = (props: AccordionProps) => {
 
     return (
         <div>
-            <h3 onClick={() => {changeCollapsed()}}>{props.title}</h3>
+            <AccordionTitle title={props.title} onClick={changeCollapsed}/>
             {!collapsed && <AccordionBody/>}
         </div>
     );
 };
 
+type AccordionTitleProrpsType = {
+    title: string
+    onClick: () => void
+}
+const AccordionTitle = (props: AccordionTitleProrpsType) => {
+    return <h3 onClick={props.onClick}>{props.title}</h3>
+}
 const AccordionBody = () => {
     return (
         <ul>
