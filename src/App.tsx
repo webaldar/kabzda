@@ -19,7 +19,6 @@ function App() {
             <Accordion title={'Menu'} collapsed={false}/>
             <Rating value={rating} ratingChange={setRating}/>
             <UncontrolledAccordion title={'Menu uncontrolled'} />
-
         </div>
     );
 }
