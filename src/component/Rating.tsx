@@ -1,5 +1,6 @@
 // @flow
 import * as React from 'react';
+import './Rating.css'
 
 type StarType = {
     value: number
@@ -20,5 +21,7 @@ type StarProps = {
     selected: boolean
 }
 function Star(props: StarProps) {
-    return props.selected ? <span><b>Star</b></span> : <span>Star</span>
+    // return props.selected ? <span><b>Star</b></span> : <span>Star</span>
+
+    return <span>{ props.selected ? <b>Star </b> : "Star "}</span>
 }

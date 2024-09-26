@@ -40,8 +40,9 @@ function Star(props: StarProps) {
     const changeStatusHandler = () => {
         props.changeStatus(props.value)
     }
-    return (props.selected ?
-            <span onClick={changeStatusHandler}><b>Star</b></span> :
-            <span onClick={changeStatusHandler}>Star</span>
-    )
+    return <span onClick={changeStatusHandler}>{props.selected ? <b>Star</b> : "Star"}</span>
+    // return (props.selected ?
+    //         <span onClick={changeStatusHandler}><b>Star</b></span> :
+    //         <span onClick={changeStatusHandler}>Star</span>
+    // )
 }
