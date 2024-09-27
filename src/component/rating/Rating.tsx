@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
-import './Rating.css'
-import {ratingValueType} from "../App";
+import './rating.css'
+import {ratingValueType} from "../../App";
 
 type StarType = {
     value: ratingValueType

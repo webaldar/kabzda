@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import './App.css';
-import {Switcher} from "./component/switcher";
-import {Rating} from "./component/Rating";
-import {UncontrolledRating} from "./component/UncontrolledRating";
-import {Accordion} from "./component/Accordion";
-import {UncontrolledAccordion} from "./component/UncontrolledAccordion";
-import {UncontrolledSwitcher} from "./component/uncontroledSwitcher";
+import {Switcher} from "./component/switcher/Switcher";
+import {Rating} from "./component/rating/Rating";
+import {UncontrolledRating} from "./component/rating/UncontrolledRating";
+import {Accordion} from "./component/accordion/Accordion";
+import {UncontrolledAccordion} from "./component/accordion/UncontrolledAccordion";
+import {UncontrolledSwitcher} from "./component/switcher/UncontroledSwitcher";
 
 export type ratingValueType = 0 | 1 | 2 | 3 | 4 | 5
 function App() {
